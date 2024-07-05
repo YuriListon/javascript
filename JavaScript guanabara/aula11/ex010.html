@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+</head>
+<body>
+    <h1>Sistema de multas</h1>
+    velocidade do carro <input type="number" name="txtvel" id="txtvel"> km/h 
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res">
+    </div>
+    <script>
+        function calcular(){
+        var txtv = window.document.querySelector('input#txtvel')
+        var res = window.document.querySelector('div#res')
+        var vel = Number(txtv.value)
+        res.innerHTML = `<p>Sua velocidade é de ${vel}</p>`
+        if (vel > 60){
+            res.innerHTML += `<p>Você está <strong>Multado</strong> por excesso de velocidade`
+            }
+        res.innerHTML += `<p>Dirija sempre com cinto de segurança</p>`
+        }
+    </script>
+    
+</body>
+</html>
+
+
+<p>Digite em qual país você nasceu?</p>
+    <input type="text" name="paísDigitado" id="paísDigitado">
+    <h1>Sistema de Verificação de Cidadania Brasileira.</h1>
+
+    <input type="button" value="Verificar" onclick="cidadania()" id="button">
+    <div id="resultado"><p>Resultado: </p></div>
+
+    var nomePaís = document.querySelector('input#paísDigitado')
+            var resultado = document.querySelector('div#resultado')
+            var país = (nomePaís.value).toUpperCase() 
+            <script>
+
+                function cidadania() {
+                                if (país != 'BRASIL'){
+                                resultado.innerHTML = `Se o seu País de origem é <strong>${país.toUpperCase()}</strong>, você é Estrangeiro.` 
+                            } else {
+                                resultado.innerHTML = `Você nasceu no <strong>${país.toUpperCase()}</strong>, parabéns! Você é Brasileiro.`
+                            }
+                        }
+                    </script>
